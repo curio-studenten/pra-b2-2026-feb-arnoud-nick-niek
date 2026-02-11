@@ -191,10 +191,10 @@ footer{
 }
 
 .hidden-on-lg{
-  display: block;
+  display: none;
 }
 .hidden-on-sm{
-  display: none;
+  display: block;
 }
 
 /* 
@@ -204,7 +204,8 @@ footer{
 */
 
 @media (max-width: 480px) {
-
+  .hidden-on-sm{display: none;}
+  .hidden-on-lg{display: block;}
 }
 
 /* 
