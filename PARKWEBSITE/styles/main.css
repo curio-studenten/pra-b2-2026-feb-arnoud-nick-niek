@@ -175,6 +175,9 @@ button{
 }
 
 .sidy-by-side{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
 }
 
 .description{
@@ -271,4 +274,12 @@ to   { opacity: 1; }
 @-o-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
+}
+@media screen {
+  .sidy-by-side{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+  text-align: center;
+}
 }
