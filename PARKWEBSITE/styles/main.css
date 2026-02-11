@@ -175,8 +175,8 @@ button{
 }
 
 .sidy-by-side{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
 }
 
@@ -277,9 +277,8 @@ to   { opacity: 1; }
 }
 @media screen {
   .sidy-by-side{
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
-  text-align: center;
 }
 }
