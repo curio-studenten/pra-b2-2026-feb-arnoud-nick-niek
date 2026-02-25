@@ -96,7 +96,6 @@ table tfoot{
   display: flex;
   flex-direction: row;
 }
-
 article{
   border-left: 5px solid #27AE60;
   padding-left: 5px;
@@ -200,7 +199,16 @@ footer{
 .hidden-on-sm{
   display: block;
 }
-
+.product-image{
+  width: 450px;
+}
+.product-info{
+  width: 450px;
+}
+.cornee-flex{
+  display: flex;
+  justify-content: space-around;
+}
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
@@ -281,4 +289,56 @@ to   { opacity: 1; }
   justify-content: space-between;
   padding: 10px;
 }
+}
+
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px; /* Of jouw gekozen breedte */
+    margin: 0 auto;
+    padding: 0 15px; /* Voorkomt dat tekst tegen de rand aanplakt */
+    box-sizing: border-box;
+}
+
+/* 2. De Flexbox aanpassing voor mobiel */
+.cornee-flex {
+    display: flex;
+    flex-direction: column; /* Zet elementen onder elkaar op mobiel */
+    align-items: center;
+}
+
+/* 3. Zorg dat de afbeelding meeschaalt */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* 4. De knop schermvullend maken voor makkelijk klikken */
+.btn-order {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* 5. Optioneel: Voor grotere schermen (Desktop) weer naast elkaar */
+@media (min-width: 768px) {
+    .cornee-flex {
+        flex-direction: row; /* Zet ze weer naast elkaar op PC */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .product-image {
+        flex: 0 0 45%; /* Afbeelding pakt 45% van de breedte */
+    }
+    
+    .product-info {
+        flex: 0 0 50%; /* Tekst pakt 50% van de breedte */
+    }
 }
